@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "show-file-tree"
+dynamic = ["version"]
+authors = [
+  { name="Rudra Prasad Bhuyan"},
+]
+description = "A small, fast CLI tool to display styled file/folder trees with rich options."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = ["cli", "tree", "file", "directory", "rich", "typer"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Filesystems",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "typer[all]>=0.9.0",
+    "pathspec>=0.11.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Rudra-G-23/show-file-tree"
+"Bug Tracker" = "https://github.com/Rudra-G-23/show-file-tree/issues"
+
+[project.scripts]
+show-file-tree = "showfilestree.cli:app"
+
+[tool.setuptools.dynamic]
+version = {attr = "showfilestree._version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv.workspace]
+members = [
+    "show-file-tree",
+]
