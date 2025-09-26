@@ -1,0 +1,169 @@
+name: "Bug Report"
+description: "Report a bug in the show-file-tree package"
+title: "[BUG]: "
+labels:
+  - "bug"
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "🔑 Short Summary"
+      description: "Provide a concise description of the bug"
+      placeholder: "e.g., --top flag fails when directory is empty"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description / Problem Statement"
+      description: "Explain what is happening and why it’s a problem"
+      placeholder: |
+        When running `show-file-tree tests/fixtures/sample_tree --top 3`, the CLI crashes with IndexError.
+        Expected it to show an empty table instead of throwing an error.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "⚙️ Steps to Reproduce"
+      description: "Numbered steps to replicate the bug"
+      placeholder: |
+        1. Clone the repository
+        2. Install dependencies with `pip install -e .`
+        3. Run: `show-file-tree tests/fixtures/sample_tree --top 3`
+        4. Observe the crash
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Expected Behavior"
+      description: "What you expected to happen"
+      placeholder: |
+        Should show a top-N table with zero files, no crash.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "❌ Actual Behavior"
+      description: "What actually happened"
+      placeholder: |
+        CLI crashes with `IndexError: list index out of range`.
+    validations:
+      required: true
+
+  - type: input
+    id: operating_system
+    attributes:
+      label: "💻 Operating System"
+      description: "Your OS (Windows / Mac / Linux)"
+      placeholder: "Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: python_version
+    attributes:
+      label: "🐍 Python Version"
+      description: "e.g., 3.11.4"
+      placeholder: "3.11.4"
+    validations:
+      required: true
+
+  - type: input
+    id: package_version
+    attributes:
+      label: "📦 show-file-tree Version"
+      description: "Current package version, e.g., 0.1.0"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs_or_screenshots
+    attributes:
+      label: "📄 Logs / Screenshots"
+      description: "Paste error logs or attach screenshots if applicable"
+      placeholder: |
+        Traceback (most recent call last):
+          File "showfilestree/cli.py", line 105, in <module>
+            ...
+        IndexError: list index out of range
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "🔧 Additional Context"
+      description: "Anything else that might help debug (config files, inputs, notes)"
+      placeholder: |
+        - Running in virtualenv
+        - Using default theme
+        - Directory contains only hidden files
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "⚠️ Priority / Severity"
+      description: "Optional, select severity of the bug"
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+        - "Critical"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: affected_components
+    attributes:
+      label: "🧩 Affected Components / Modules"
+      description: "Optional: select modules related to this bug"
+      options:
+        - label: "CLI (cli.py)"
+        - label: "Tree Builder (tree_builder.py)"
+        - label: "Tree Renderer (tree_renderer.py)"
+        - label: "Markdown Export (md_exporter.py)"
+        - label: "Notes Manager (notes_manager.py)"
+        - label: "Other"
+    validations:
+      required: false
+
+  - type: textarea
+    id: possible_solution
+    attributes:
+      label: "💡 Possible Solution / Suggestion"
+      description: "Optional: suggest how this could be fixed"
+      placeholder: |
+        - Add check for empty directories in `top_n_files` function
+        - Return empty table instead of crashing
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: pre_submission_checklist
+    attributes:
+      label: "✅ Pre-Submission Checklist"
+      description: "Please confirm before submitting"
+      options:
+        - label: "Reproduced the issue locally"
+          required: true
+        - label: "Read the contributing guidelines"
+          required: true
+        - label: "Searched for duplicate issues"
+          required: true
+        - label: "Included logs/screenshots (if applicable)"
+          required: false
+        - label: "Included environment details"
+          required: true
+    validations:
+      required: true

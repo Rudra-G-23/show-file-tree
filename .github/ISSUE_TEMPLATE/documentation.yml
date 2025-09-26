@@ -1,0 +1,108 @@
+name: "Documentation Issue"
+description: "Report a problem, suggestion, or improvement for the show-file-tree documentation"
+title: "[DOC]: "
+labels:
+  - "documentation"
+
+body:
+  - type: input
+    id: doc_section
+    attributes:
+      label: "📄 Documentation Section / Page"
+      description: "Which part of the docs is affected? (file name, link, or topic)"
+      placeholder: "e.g., README.md - CLI Flags section"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "📝 Description of the Issue"
+      description: "What is missing, unclear, outdated, or incorrect?"
+      placeholder: |
+        - Flag description for `--top` is confusing
+        - Examples do not show expected output
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_improvement
+    attributes:
+      label: "💡 Suggested Improvement"
+      description: "How should it be clarified, updated, or expanded?"
+      placeholder: |
+        - Update README.md with example: `show-file-tree . --top 3`
+        - Add screenshot of expected table output
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: "🎯 Use Case / Why This Matters"
+      description: "Why is this important for users or contributors?"
+      placeholder: |
+        - Helps new users understand how to use `--top` flag
+        - Prevents confusion and reduces repeated questions/issues
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "📎 Additional Context (Optional)"
+      description: "Attach screenshots, links, or examples if relevant"
+      placeholder: |
+        - Screenshot of terminal output
+        - Link to relevant section in docs or related issues
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "⚠️ Priority / Importance (Optional)"
+      description: "Select the importance of this documentation improvement"
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+        - "Critical"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: affected_modules
+    attributes:
+      label: "🧩 Affected Modules / Components (Optional)"
+      description: "Which parts of the package are affected by this documentation issue?"
+      options:
+        - label: "CLI (cli.py)"
+        - label: "Tree Builder (tree_builder.py)"
+        - label: "Tree Renderer (tree_renderer.py)"
+        - label: "Markdown Export (md_exporter.py)"
+        - label: "Notes Manager (notes_manager.py)"
+        - label: "Other"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "✅ Pre-Submission Checklist"
+      description: "Please confirm before submitting"
+      options:
+        - label: "Documentation section/page clearly identified"
+          required: true
+        - label: "Issue description provided"
+          required: true
+        - label: "Suggested improvement detailed"
+          required: true
+        - label: "Use case / importance explained"
+          required: true
+        - label: "Checked existing docs for duplicates"
+          required: true
+        - label: "Optional attachments/screenshots included (if applicable)"
+          required: false
+    validations:
+      required: true

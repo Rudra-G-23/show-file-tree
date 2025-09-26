@@ -1,0 +1,116 @@
+name: "Question / Help"
+description: "Ask a question or clarification about the show-file-tree package"
+title: "[QUESTION]: "
+labels:
+  - "question"
+
+body:
+  - type: input
+    id: question
+    attributes:
+      label: "❓ Question / Summary"
+      description: "State your question clearly and concisely"
+      placeholder: "e.g., How can I merge datasets with different column names using show-file-tree?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "📝 Context / Background"
+      description: "Explain why you’re asking and what you are working on"
+      placeholder: |
+        - Working on multiple Yelp datasets
+        - Want to visualize relationships between business, review, and user datasets
+        - Already tried manually checking column names
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried_steps
+    attributes:
+      label: "🔧 What I’ve Tried"
+      description: "Show steps, code, or docs you already checked"
+      placeholder: |
+        - Checked README and usage.md
+        - Tried `show-file-tree . --include "business*" --top 5`
+        - Used pandas merge attempts but confused by column differences
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_answer
+    attributes:
+      label: "🎯 Expected Answer / Clarification Needed"
+      description: "What exactly are you hoping to learn or clarify?"
+      placeholder: |
+        - Best practice to merge datasets with mismatched column names
+        - How show-file-tree could help visualize connections interactively
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_details
+    attributes:
+      label: "📎 Additional Details (Optional)"
+      description: "Add links, screenshots, or code snippets if helpful"
+      placeholder: |
+        - Screenshot of current dataset structure
+        - Link to related issues or discussions
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "⚠️ Priority / Importance (Optional)"
+      description: "Select the importance or urgency of this question"
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: affected_modules
+    attributes:
+      label: "🧩 Affected Modules / Components (Optional)"
+      description: "Which parts of the package relate to your question?"
+      options:
+        - label: "CLI (cli.py)"
+        - label: "Tree Builder (tree_builder.py)"
+        - label: "Tree Renderer (tree_renderer.py)"
+        - label: "Markdown Export (md_exporter.py)"
+        - label: "Notes Manager (notes_manager.py)"
+        - label: "Other"
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_references
+    attributes:
+      label: "🔗 Related References / Links (Optional)"
+      description: "Link to related issues, PRs, docs, or tutorials"
+      placeholder: |
+        - Issue #12
+        - README.md examples
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: submission_checklist
+    attributes:
+      label: "✅ Pre-Submission Checklist"
+      description: "Please confirm before submitting"
+      options:
+        - label: "Question is clearly stated"
+          required: true
+        - label: "Context and background provided"
+          required: true
+        - label: "Steps or attempts already tried listed"
+          required: true
+        - label: "Checked existing issues/docs for similar questions"
+          required: true
+    validations:
+      required: true
