@@ -1,0 +1,136 @@
+# Site Details
+site_name: Show File Tree Docs
+site_description: |
+  A small, fast CLI tool to display styled file/folder trees with rich 
+  options, colors, icons, and metadata.
+site_author: Rudra Prasad Bhuyan
+site_url: https://pypi.org/project/show-file-tree/
+
+# Repo Details
+repo_url: https://github.com/Rudra-G-23/show-file-tree
+repo_name: show-file-tree
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2025 Rudra Prasad Bhuyan. All rights reserved.
+
+theme:
+  name: material
+  repo_icon: fontawesome/brands/files-pinwheel
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    #- content.code.select
+    #- content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    #- navigation.instant
+    #- navigation.instant.prefetch
+    - navigation.instant.progress
+    #- navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    #- navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    #- toc.integrate
+  palette:
+    - scheme: default
+      primary: '#5e17eb'   
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: '#5e17eb'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  #favicon: assets/favicon.png
+  icon:
+    logo: material/folder-open  
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - git-authors
+  - git-committers:
+      repository: Rudra-G-23/show-file-tree
+      # token: !!python/object/apply:os.getenv ["MKDOCS_GIT_COMMITTERS_APIKEY"]
+
+markdown_extensions:
+  - admonition
+  - toc:  # Table of Content
+      permalink: true  # Add little anchor link
+  - pymdownx.superfences  # Advanced code block
+  - pymdownx.tabbed  # Tabbed
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+# Extra site-level data (footer, social)
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Rudra-G-23/show-file-tree/
+      name: Github
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@Rudra_love_with_data
+      name: YouTube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rudra-prasad-bhuyan-44a388235/
+      name: LinkedIn
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/rudraprasadbhuyan
+      name: Kaggle
+    - icon: fontawesome/brands/pinterest
+      link: https://in.pinterest.com/rudraprasadbhuyan23
+      name: Pinterest
+
+# Navigation
+nav:
+  - Home: index.md
+  - General:
+      - "About": "General/about.md"
+      - "Version": "General/version.md"
+      - "CLI Reference": "General/cli-reference.md"
+  - Output & display:
+      - "Count": "Output & display/count.md"
+      - "Format": "Output & display/format.md"
+      - "No icon": "Output & display/no-icon.md"
+      - "Size": "Output & display/size.md"
+      - "Theme": "Output & display/theme.md"
+  - Sorting:
+      - "Order": "Sorting/order.md"
+      - "Sort": "Sorting/sort.md"
+  - Filtering:
+      - File Based:
+          - "Exclude": "Filtering/File Based/exclude.md"
+          - "Include": "Filtering/File Based/include.md"
+      - Time Based:
+          - "ctime-after & ctime-before": "Filtering/Time Based/ctime-after-and-ctime-before.md"
+          - "mtime-after & mtime-before": "Filtering/Time Based/mtime-after-and-mtime-before.md"
+  - Tree-Structure:
+      - "Gitignore": "Tree-Structure/gitignore.md"
+      - "Hidden files": "Tree-Structure/hidden.md"
+      - "Max depth": "Tree-Structure/max-depth.md"
