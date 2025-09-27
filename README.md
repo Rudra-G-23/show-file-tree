@@ -1,71 +1,229 @@
 # show-file-tree
 
-A small, fast CLI tool to display styled file/folder trees with rich options, colors, icons, and metadata.
+A small, fast CLI tool to display **styled file/folder trees** with rich options — colors, icons, sizes, counts, sorting, filtering and Markdown export.
 
-## Installation
+Perfect for quickly visualizing and documenting project structure.
 
-You can install `show-file-tree` using `pip`:
+---
+
+## Quick links
+
+* **PyPI:** `pip install show-file-tree`
+* **Author / Maintainer:** Rudra Prasad Bhuyan
+* **License:** MIT
+* **Changelog:** see `CHANGELOG.md` (v0.0.1 — Released: 2025-09-25)
+
+---
+
+## Install
+
+Install from PyPI:
 
 ```bash
 pip install show-file-tree
-````
+```
 
-## Quick Start
+Install from source (development):
 
-Navigate to any directory and run the command.
+```bash
+git clone https://github.com/YOUR_USERNAME/show-file-tree.git
 
-### Default Output:
+cd show-file-tree
 
-    ```bash
-    show-file-tree .
-    ```
+python -m venv .venv
+```
+
+```bash
+# Linux / macOS
+source .venv/bin/activate
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+pip install -e ".[all]"
+pip install pytest
+```
+
+---
+
+## Quick start
+
+Print a tree of the current directory:
+
+```bash
+show-file-tree .
+```
+
+Limit depth and show sizes & counts:
+
+```bash
+show-file-tree . -d 2 --size --count
+```
+
+Export the tree to Markdown:
+
+```bash
+# creates: project-file-tree.md
+show-file-tree /path/to/your/project --format md
+```
+
+---
+
+## What it does (core features)
+
+* Build a hierarchical tree of files and folders (fast, memory-safe traversal).
+* Render a pleasant, readable terminal tree with icons and counts.
+* Display file/folder sizes in human-readable units (KB/MB/GB).
+* Filter by glob patterns and by modification/creation time.
+* Sort by name or size (ascending/descending).
+* Export the tree to Markdown (`--format md`) when desired or auto-fallback for long trees.
+* Multiple visual themes and a plain ASCII mode for compatibility.
 
 
 
+---
 
-### Display with more details like size, counts, and limited depth:
+## Example output (terminal)
 
-    ```bash
-    show-file-tree . -d 2 --size --count
-    ```
+```
+Hello Data Points
 
-### Export the tree to a Markdown file:
++ ------------------------------------------------------------------------ +
+                                My Project
++ ------------------------------------------------------------------------ +
 
-    ```bash
-    show-file-tree /path/to/your/project --format md
-    ```
+├── 📁 src (3f, 2d)
+│   ├── 📁 showfilestree (2f)
+│   └── 📁 showfilestree.egg-info (0f)
+├── 📁 tests (2f)
+└── 📄 README.md (25 KB)
+```
 
-This will create a `project-file-tree.md` file in your current directory.
 
-## Features & Flags
+---
 
-`show-file-tree` offers a rich set of flags to customize the output.
+## CLI reference (main flags)
 
-* `-d, --max-depth`: Limit the recursion depth.
-* `--gitignore / --no-gitignore`: Respect or ignore `.gitignore` files (default: respect).
-* `--hidden`: Show hidden files and folders.
-* `--sort {name,size}`: Sort the output by name or size.
-* `--order {asc,desc}`: Set the sort order.
-* `--format {tree,md}`: Output format (default: tree). Automatically falls back to `md` for very large trees.
-* `--size`: Display file/folder sizes.
-* `--count`: Display file/directory counts within folders.
-* `--mtime-after, --mtime-before`: Filter by modification time.
-* `--include, --exclude`: Filter by glob patterns.
-* `--no-icons`: Render a plain ASCII tree.
-* `--theme`: Apply a color theme (`colorful`, `monokai`, `light`, `nocolor`).
-* `--top N`: List the top N files by size or modification time.
-* `--about, --version`: Show package information.
+### Tree structure
 
-## Contributing
+* `--max-depth, -d <INT>` — Maximum recursion depth. Default: unlimited.
+* `--gitignore / --no-gitignore` — Respect `.gitignore` files by default.
+* `--hidden` — Show hidden files and directories.
 
-Contributions are welcome! Please see CONTRIBUTING.md for details on how to set up your development environment and submit pull requests.
+### Sorting
 
-## Author / Maintainer
+* `--sort {name,size}` — Sort by `name` or `size`. Default: `name`.
+* `--order {asc,desc}` — Sorting order. Default: `asc`.
 
-Rudra Prasad Bhuyan
+### Output & display
+
+* `--format {tree,md}` — `tree` (terminal) or `md` (Markdown file). Default: `tree`.
+* `--size` — Show file/folder sizes.
+* `--count` — Show counts inside folders (e.g. `src (2f, 4d)`).
+* `--no-icons` — Disable icons / emojis for plain ASCII output.
+* `--theme {colorful,monokai,light,nocolor}` — Choose a color theme.
+
+### Filtering
+
+* `--include, -i <PATTERN>` — Include only paths matching glob pattern (repeatable).
+* `--exclude, -e <PATTERN>` — Exclude paths matching glob pattern (repeatable).
+* `--mtime-after <YYYY-MM-DD>` / `--mtime-before <YYYY-MM-DD>` — Filter by modification time.
+* `--ctime-after <YYYY-MM-DD>` / `--ctime-before <YYYY-MM-DD>` — Filter by creation time.
+
+### General
+
+* `--version` — Show package version.
+* `--about` — Show package information.
+
+---
+
+## Markdown export behavior
+
+When `--format md` is used (or when the CLI auto-falls back due to long output), a Markdown file named `<rootname>-file-tree.md` is created in your current working directory. The MD file includes:
+
+* A top heading (`Hello Data Points`) and a visual tree block.
+* Sizes, counts, and timestamps (if requested).
+* A short summary (top files) when `--top` is used.
+
+---
+
+## Usage examples
+
+Default (current dir):
+
+```bash
+show-file-tree .
+```
+
+Depth + metadata:
+
+```bash
+show-file-tree . -d 3 --size --count --theme monokai
+```
+
+Export to markdown (project):
+
+```bash
+# -> my-project-file-tree.md
+show-file-tree /home/user/my-project --format md --size
+```
+
+Filtering and sorting:
+
+```bash
+show-file-tree . --include "*.py" --exclude "tests/*" --sort size --order desc
+```
+
+---
+
+## Development & contributing
+
+Contributions are welcome — bug reports, feature requests, documentation updates, tests, and code. See `CONTRIBUTING.md` for full guidelines. Short summary:
+
+* Fork the repo and branch from `main`.
+* Branch prefixes:
+
+  * `feature/` — new features
+  * `fix/` — bug fixes
+  * `docs/` — documentation
+  * `wip/` — work-in-progress
+  * `chore/` — tooling / config
+  * `refactor/` — code cleanup
+* Run tests: `pytest`
+* Format code with `black`/`ruff`.
+* Open PR with clear description and tests.
+
+(Full contributing guidelines are available in `CONTRIBUTING.md`.)
+
+---
+
+## Testing
+
+* Tests live in `tests/` and use `pytest`.
+* Use lightweight fixtures and temporary directories for fast tests.
+* Recommended to run: `pytest -q` in your virtual environment.
+
+---
+
+## CHANGELOG & Releases
+
+* v0.0.1 — **Initial release** — *Released: 2025-09-25*
+
+  * Core features: tree building, terminal rendering, `-d/--max-depth`, `--gitignore`, `--hidden`, `--size`, `--count`, Markdown export `--format md`, filters, sorting, theming.
+  
+* See `CHANGELOG.md` for full history and future releases.
+
+---
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+`show-file-tree` is released under the **MIT License**. See `LICENSE` for details.
 
+---
 
+## Contact / support
+
+Author: **Rudra Prasad Bhuyan**
+GitHub: `https://github.com/Rudra-G-23/show-file-tree`
+
+---
