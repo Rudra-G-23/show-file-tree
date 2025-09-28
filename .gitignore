@@ -33,8 +33,11 @@ htmlcov/
 *.log
 *.in
 
-# Ignore MkDocs cache files
+# MkDocs / plugin caches
 .cache/
+# or more specifically
+.cache/plugin/
+
 
 # Jupyter Notebook ch# Python cache
 __pycache__/
@@ -75,3 +78,4 @@ htmlcov/
 .ipynb_checkpoints/
 eckpoints
 .ipynb_checkpoints/
+.cache/
