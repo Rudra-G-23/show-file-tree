@@ -6,6 +6,20 @@ Perfect for quickly visualizing and documenting project structure.
 
 ---
 
+[![Show File Tree](https://img.shields.io/badge/show--file--tree-5317eb?logo=github&logoColor=black)](https://github.com/Rudra-G-23/show-file-tree) 
+[![Downloads](https://img.shields.io/pypi/dm/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
+[![PyPI](https://img.shields.io/pypi/v/show-file-tree.svg)](https://pypi.org/project/show-file-tree)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![Python versions](https://img.shields.io/pypi/pyversions/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
+[![GitHub Issues](https://img.shields.io/github/issues/Rudra-G-23/show-file-tree)](https://github.com/Rudra-G-23/show-file-tree/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/Rudra-G-23/show-file-tree)](https://github.com/Rudra-G-23/show-file-tree/pulls)
+[![Repo Size](https://img.shields.io/github/repo-size/Rudra-G-23/show-file-tree)](https://github.com/Rudra-G-23/show-file-tree)
+[![Fast & Lightweight](https://img.shields.io/badge/fast%20%26%20lightweight-✅-brightgreen)](https://github.com/Rudra-G-23/show-file-tree)
+[![Made with 💜 Python](https://img.shields.io/badge/Made%20with%20❤️-Python-brightgreen)](https://github.com/Rudra-G-23/show-file-tree)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue)](https://github.com/Rudra-G-23/show-file-tree/issues)
+
+---
+
 ## Quick links
 
 * **PyPI:** `pip install show-file-tree`
@@ -57,14 +71,14 @@ show-file-tree .
 Limit depth and show sizes & counts:
 
 ```bash
-show-file-tree . -d 2 --size --count
+show-file-tree  -d 2 --size --count
 ```
 
 Export the tree to Markdown:
 
 ```bash
 # creates: project-file-tree.md
-show-file-tree /path/to/your/project --format md
+show-file-tree --format md /path/to/your/project 
 ```
 
 ---
@@ -158,20 +172,20 @@ show-file-tree .
 Depth + metadata:
 
 ```bash
-show-file-tree . -d 3 --size --count --theme monokai
+show-file-tree  -d 3 --size --count --theme monokai
 ```
 
 Export to markdown (project):
 
 ```bash
 # -> my-project-file-tree.md
-show-file-tree /home/user/my-project --format md --size
+show-file-tree --format md --size /home/user/my-project 
 ```
 
 Filtering and sorting:
 
 ```bash
-show-file-tree . --include "*.py" --exclude "tests/*" --sort size --order desc
+show-file-tree  --include "*.py" --exclude "tests/*" --sort size --order desc
 ```
 
 ---
