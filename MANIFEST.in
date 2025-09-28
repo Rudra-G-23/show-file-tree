@@ -1,9 +1,0 @@
-include README.md
-include LICENSE
-include LICENSE.md
-include CHANGELOG.md
-include CONTRIBUTING.md
-include CODE_OF_CONDUCT.md
-include *.txt
-include *.rst
-recursive-include src/showfilestree *.py

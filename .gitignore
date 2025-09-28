@@ -53,6 +53,7 @@ env/
 .idea/
 *.swp
 *.swo
+*.in
 
 # OS files
 .DS_Store
