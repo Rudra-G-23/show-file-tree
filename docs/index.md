@@ -1,8 +1,10 @@
 # Hello Data Points 👋
 
-> A small, fast CLI to display styled file/folder trees — perfect for documenting project structure, exporting to Markdown, or quickly inspecting repos.
+!!! quote "Desorption"
+    __A small, fast CLI to display styled file/folder trees — perfect for documenting project structure, exporting to Markdown, or quickly inspecting repos.__
 
 ---
+
 [![Show File Tree](https://img.shields.io/badge/show--file--tree-5317eb?logo=github&logoColor=black)](https://github.com/Rudra-G-23/show-file-tree) 
 [![Downloads](https://img.shields.io/pypi/dm/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
 [![PyPI](https://img.shields.io/pypi/v/show-file-tree.svg)](https://pypi.org/project/show-file-tree)
@@ -17,131 +19,149 @@
 
 ---
 
-## Quick links
-- **Getting started** — Installation & Quickstart.
-- **CLI reference** — Complete flag list and examples.
-- **Features** — What the tool can do.
-- **Examples** — Real-world usage and exported Markdown.
-- **Contributing** — How to contribute, tests, and release notes.
-- **Changelog** — Release history.
+# Install
+
+=== "From PyPI"
+    ```py linenums="1" hl_lines="2"
+    # From PyPI
+    pip install show-file-tree
+    ```
+
+=== "From UV"
+    ```py linenums="1" hl_lines="2"
+    # From UV
+    uv pip install show-file-tree
+    ```
+
+=== "From Source"
+    ```py linenums="1" title="From Source"
+    # From source (dev)
+    git clone https://github.com/Rudra-G-23/show-file-tree.git
+
+    cd show-file-tree
+    python -m venv .venv
+    ```
+
+=== "Windows PowerShell"
+    ```ps1 linenums="1" title="Windows PowerShell"
+    .venv\Scripts\Activate.ps1
+    pip install -e ".[all]"
+    ```
 
 ---
 
-## Quick start
+# Basic 
 
-### Install
-```
-# From PyPI
-pip install show-file-tree
-```
+!!! tip "Command Line Interface of show-file-tree"
 
-```
-# From source (dev)
-git clone https://github.com/Rudra-G-23/show-file-tree.git
-cd show-file-tree
-python -m venv .venv
-```
-
-```
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
-pip install -e ".[all]"
-```
-### Basic usage
-
-```
-# Print a tree of the current directory:
-show-file-tree .
-```
-
-Limit depth and show sizes & counts:
-
-```
-show-file-tree  -d 2 --size --count
-```
-
-Export the tree to Markdown (creates `<root>-file-tree.md`):
-
-```
-show-file-tree /path/to/project --format md --size
-```
+    === "Usage" 
+        ```bash linenums="1" hl_lines="2"
+        # This is the first message you’ll see if you encounter any errors.
+        show-file-tree [OPTIONS] [ROOT_PATH] COMMAND [ARGS]...
+        ```
+    === "COMMAND"
+        ```text
+        [OPTIONS]:  TThe specific command or action to perform, e.g., `--count` or `--size`.
+        ```
+    === "ROOT_PATH"
+        ```text
+        [ROOT_PATH]: The root directory to start the file tree from. Default is current directory (.) 
+        ```
 
 ---
 
-## Why use `show-file-tree`?
+# File Path
 
-* **Fast, memory-safe traversal** — suitable for large directories.
-* **Pretty terminal output** — icons, counts, human-readable sizes.
-* **Powerful filtering** — globs, mtime/ctime windows.
-* **Markdown export** — create readable project documentation automatically.
-* **Themes & ASCII fallback** — works in CI or minimal terminals.
+!!! danger "File path miss Match"
 
----
+    === "Incorrect File Path"
+        ```bash
+        show-file-tree [ROOT_PATH] COMMAND 
+        ```
+    === "Examples"
+        !!! example "Incorrect File Path Examples"
 
-## Short CLI reference
+        === "Example 1"
+            ```bash
+            # Why Incorrect ✖️: Dot is default path,so no need to use
+            show-file-tree . --size
+            ``` 
+        === "Example 2"
+            ```bash
+            # Why Incorrect ✖️: First Path used 
+            show-file-tree "C:\Users\Rudra\Desktop\MLOPs" --count
+            ```
+        === "Example 3"
+            ```bash
+            # Why Incorrect ✖️: First Path used 
+            show-file-tree "C:\Users\Rudra\Desktop\MLOPs"  --format md 
+            ```
 
-```
-# structure-related
---max-depth, -d       Maximum recursion depth
---gitignore / --no-gitignore  Respect .gitignore (default: on)
---hidden              Show hidden files
-```
+!!! success "File path  Match"
 
-```
-# sorting
---sort {name,size}
---order {asc,desc}
-```
+    === "Correct File Path"
+        ```bash
+         show-file-tree COMMAND [ROOT_PATH]
+        ```
+    === "Examples"
+        !!! example "Correct File Path Examples"
 
-```
-# output & display
---format {tree,md}
---size
---count
---no-icons
---theme {colorful,monokai,light,nocolor}
-```
-
-```
-# filtering
---include, -i <PATTERN>
---exclude, -e <PATTERN>
---mtime-after <YYYY-MM-DD>
---mtime-before <YYYY-MM-DD>
---ctime-after <YYYY-MM-DD>
---ctime-before <YYYY-MM-DD>
-```
-
-```
-# general
---version
---about
-```
-
-For the full reference, see the **CLI reference** page.
-
----
-
-## Example: generate project documentation
-
-```
-# Create a Markdown file documenting your repo root
-show-file-tree /home/user/my-project --format md --size --count
-# -> my-project-file-tree.md
-```
+        === "Example 1"
+            ```bash
+            # Why Correct ✔️: Directly used the command 
+            show-file-tree  --size 
+            ``` 
+        === "Example 2"
+            ```bash
+            # Why Correct ✔️: First command -> Path
+            show-file-tree --count "C:\Users\Rudra\Desktop\MLOPs" 
+            ```
+        === "Example 3"
+            ```bash
+            Why Correct ✔️: First command -> Path 
+            show-file-tree  --format md "C:\Users\Rudra\Desktop\MLOPs"  
+            ```
 
 ---
 
-## Ready-made next steps
+# Error Handing 
 
-* 🔎 **Read the Getting Started** — installation + first run
-* 📚 **Explore Examples** — real outputs and exported Markdown
-* 🛠️ **Contribute** — tests, style, feature requests (see CONTRIBUTING.md)
+!!! info "When a typo error occurs"
+
+    === "If typo error occurs"
+        !!! failure "Error"
+        ```bash
+        Usage: show-file-tree [OPTIONS] [ROOT_PATH] COMMAND [ARGS]...
+        Try 'show-file-tree --help' for help.
+        ╭─ Error ──────────────────────────────────────────────────────────────────────────╮
+        │ Invalid value for '[ROOT_PATH]': Directory 'count' does not exist.               │
+        ╰──────────────────────────────────────────────────────────────────────────────────╯
+        ```
+    === "Use `Help` command" 
+        !!! success "Used `--help` command"
+        ```bash
+        show-file-tree --help
+        ```
 
 ---
 
-## Footer / Contact
+!!! example "Examples"
+    ``` bash title="1. Exported in Markdown format"
+    show-file-tree --format md [ROOT_PATH]
+    ```
 
-- Author: **Rudra Prasad Bhuyan** — [GitHub](https://github.com/Rudra-G-23) 
-- License: MIT — see `LICENSE.md` 
-- Changelog: `CHANGELOG.md`
+    ```bash title="2. Limit depth and show sizes & counts"
+    show-file-tree  -d 2 --size --count
+    ```
+---
+
+# Why use `show-file-tree`?
+
+- [x] **Fast, memory-safe traversal** — suitable for large directories.
+- [x] **Pretty terminal output** — icons, counts, human-readable sizes.
+- [x]  **Powerful filtering** — globs, mtime/ctime windows.
+- [x]  **Markdown export** — create readable project documentation automatically.
+- [x]  **Themes & ASCII fallback** — works in CI or minimal terminals.
+- [x] and many more .....
+
+---

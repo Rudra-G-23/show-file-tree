@@ -8,8 +8,7 @@ site_url: https://pypi.org/project/show-file-tree/
 
 # Repo Details
 repo_url: https://github.com/Rudra-G-23/show-file-tree
-repo_name: Rudra-G-23/show-file-tree
-
+repo_name: show-file-tree
 edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; 2025 Rudra Prasad Bhuyan. All rights reserved.
@@ -17,6 +16,8 @@ copyright: Copyright &copy; 2025 Rudra Prasad Bhuyan. All rights reserved.
 theme:
   name: material
   repo_icon: fontawesome/brands/files-pinwheel
+  icon:
+    annotation: material/star-four-points-circle
   features:
     - announce.dismiss
     - content.action.edit
@@ -70,24 +71,34 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
-  - git-authors
-  - git-committers:
-      repository: Rudra-G-23/show-file-tree
-      # token: !!python/object/apply:os.getenv ["MKDOCS_GIT_COMMITTERS_APIKEY"]
 
 markdown_extensions:
   - admonition
-  - toc:  # Table of Content
-      permalink: true  # Add little anchor link
-  - pymdownx.superfences  # Advanced code block
-  - pymdownx.tabbed  # Tabbed
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.details
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 # Extra site-level data (footer, social)
 extra:
@@ -115,6 +126,7 @@ nav:
       - "About": "General/about.md"
       - "Version": "General/version.md"
       - "CLI Reference": "General/cli-reference.md"
+      - "Features": "General/features.md"
   - Output & display:
       - "Count": "Output & display/count.md"
       - "Format": "Output & display/format.md"
@@ -134,4 +146,6 @@ nav:
   - Tree-Structure:
       - "Gitignore": "Tree-Structure/gitignore.md"
       - "Hidden files": "Tree-Structure/hidden.md"
+
       - "Max depth": "Tree-Structure/max-depth.md"
+
