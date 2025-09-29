@@ -31,6 +31,13 @@ htmlcov/
 
 # Logs
 *.log
+*.in
+
+# MkDocs / plugin caches
+.cache/
+# or more specifically
+.cache/plugin/
+
 
 # Jupyter Notebook ch# Python cache
 __pycache__/
@@ -53,6 +60,7 @@ env/
 .idea/
 *.swp
 *.swo
+*.in
 
 # OS files
 .DS_Store
@@ -70,3 +78,4 @@ htmlcov/
 .ipynb_checkpoints/
 eckpoints
 .ipynb_checkpoints/
+.cache/
