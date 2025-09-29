@@ -1,22 +1,53 @@
-# show-file-tree
+# 🌳🗃️ show-file-tree
 
-A small, fast CLI tool to display **styled file/folder trees** with rich options — colors, icons, sizes, counts, sorting, filtering and Markdown export.
+> A small, fast CLI tool to display **styled file/folder trees** with rich options — colors, icons, sizes, counts, sorting, filtering and Markdown export.
+>
+> Perfect for quickly visualizing and documenting project structure.
 
-Perfect for quickly visualizing and documenting project structure.
+---
+![img](https://i.pinimg.com/originals/67/31/82/67318281dfd705bb5c9fb8d2afbacefd.png)
+
+<p align="center">
+  🐦‍🔥 <strong>Documentation:</strong> 
+  <a href="https://rudra-g-23.github.io/show-file-tree/" target="_blank">
+    https://rudra-g-23.github.io/show-file-tree/
+  </a>
+</p>
 
 ---
 
-[![Show File Tree](https://img.shields.io/badge/show--file--tree-5317eb?logo=github&logoColor=black)](https://github.com/Rudra-G-23/show-file-tree) 
-[![Downloads](https://img.shields.io/pypi/dm/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
-[![PyPI](https://img.shields.io/pypi/v/show-file-tree.svg)](https://pypi.org/project/show-file-tree)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
-[![Python versions](https://img.shields.io/pypi/pyversions/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
-[![GitHub Issues](https://img.shields.io/github/issues/Rudra-G-23/show-file-tree)](https://github.com/Rudra-G-23/show-file-tree/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/Rudra-G-23/show-file-tree)](https://github.com/Rudra-G-23/show-file-tree/pulls)
-[![Repo Size](https://img.shields.io/github/repo-size/Rudra-G-23/show-file-tree)](https://github.com/Rudra-G-23/show-file-tree)
-[![Fast & Lightweight](https://img.shields.io/badge/fast%20%26%20lightweight-✅-brightgreen)](https://github.com/Rudra-G-23/show-file-tree)
-[![Made with 💜 Python](https://img.shields.io/badge/Made%20with%20❤️-Python-brightgreen)](https://github.com/Rudra-G-23/show-file-tree)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue)](https://github.com/Rudra-G-23/show-file-tree/issues)
+<p align="center">
+  <a href="https://github.com/Rudra-G-23/show-file-tree">
+    <img src="https://img.shields.io/badge/show--file--tree-5317eb?logo=github&logoColor=black" alt="Show File Tree" />
+  </a>
+  <a href="https://pypi.org/project/show-file-tree">
+    <img src="https://img.shields.io/pypi/v/show-file-tree.svg" alt="PyPI" />
+  </a>
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" />
+  </a>
+  <a href="https://pypi.org/project/show-file-tree/">
+    <img src="https://img.shields.io/pypi/pyversions/show-file-tree.svg" alt="Python versions" />
+  </a>
+  <a href="https://github.com/Rudra-G-23/show-file-tree/issues">
+    <img src="https://img.shields.io/github/issues/Rudra-G-23/show-file-tree" alt="GitHub Issues" />
+  </a>
+  <a href="https://github.com/Rudra-G-23/show-file-tree/pulls">
+    <img src="https://img.shields.io/github/issues-pr/Rudra-G-23/show-file-tree" alt="GitHub PRs" />
+  </a>
+  <a href="https://github.com/Rudra-G-23/show-file-tree">
+    <img src="https://img.shields.io/github/repo-size/Rudra-G-23/show-file-tree" alt="Repo Size" />
+  </a>
+  <a href="https://github.com/Rudra-G-23/show-file-tree">
+    <img src="https://img.shields.io/badge/fast%20%26%20lightweight-✅-brightgreen" alt="Fast & Lightweight" />
+  </a>
+  <a href="https://github.com/Rudra-G-23/show-file-tree">
+    <img src="https://img.shields.io/badge/Made%20with%20❤️-Python-brightgreen" alt="Made with Python" />
+  </a>
+  <a href="https://github.com/Rudra-G-23/show-file-tree/issues">
+    <img src="https://img.shields.io/badge/contributions-welcome-blue" alt="Contributions Welcome" />
+  </a>
+</p>
 
 ---
 
@@ -97,25 +128,6 @@ show-file-tree --format md /path/to/your/project
 
 ---
 
-## Example output (terminal)
-
-```
-Hello Data Points
-
-+ ------------------------------------------------------------------------ +
-                                My Project
-+ ------------------------------------------------------------------------ +
-
-├── 📁 src (3f, 2d)
-│   ├── 📁 showfilestree (2f)
-│   └── 📁 showfilestree.egg-info (0f)
-├── 📁 tests (2f)
-└── 📄 README.md (25 KB)
-```
-
-
----
-
 ## CLI reference (main flags)
 
 ### Tree structure
@@ -161,77 +173,9 @@ When `--format md` is used (or when the CLI auto-falls back due to long output),
 
 ---
 
-## Usage examples
-
-Default (current dir):
-
-```bash
-show-file-tree .
-```
-
-Depth + metadata:
-
-```bash
-show-file-tree  -d 3 --size --count --theme monokai
-```
-
-Export to markdown (project):
-
-```bash
-# -> my-project-file-tree.md
-show-file-tree --format md --size /home/user/my-project 
-```
-
-Filtering and sorting:
-
-```bash
-show-file-tree  --include "*.py" --exclude "tests/*" --sort size --order desc
-```
-
----
-
-## Development & contributing
-
-Contributions are welcome — bug reports, feature requests, documentation updates, tests, and code. See `CONTRIBUTING.md` for full guidelines. Short summary:
-
-* Fork the repo and branch from `main`.
-* Branch prefixes:
-
-  * `feature/` — new features
-  * `fix/` — bug fixes
-  * `docs/` — documentation
-  * `wip/` — work-in-progress
-  * `chore/` — tooling / config
-  * `refactor/` — code cleanup
-* Run tests: `pytest`
-* Format code with `black`/`ruff`.
-* Open PR with clear description and tests.
-
-(Full contributing guidelines are available in `CONTRIBUTING.md`.)
-
----
-
-## Testing
-
-* Tests live in `tests/` and use `pytest`.
-* Use lightweight fixtures and temporary directories for fast tests.
-* Recommended to run: `pytest -q` in your virtual environment.
-
----
-
-## CHANGELOG & Releases
-
-* v0.0.1 — **Initial release** — *Released: 2025-09-25*
-
-  * Core features: tree building, terminal rendering, `-d/--max-depth`, `--gitignore`, `--hidden`, `--size`, `--count`, Markdown export `--format md`, filters, sorting, theming.
-  
-* See `CHANGELOG.md` for full history and future releases.
-
----
-
 ## License
 
-`show-file-tree` is released under the **MIT License**. See `LICENSE` for details.
+`show-file-tree` is released under the **MIT License**.
 
 ---
 
