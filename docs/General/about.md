@@ -1,3 +1,7 @@
+---
+icon: material/information
+---
+
 # About
 
 !!! info
@@ -7,8 +11,6 @@
     **Author:** Rudra Prasad Bhuyan  
     **License :** MIT
 
----
-
 !!! abstract "Quick facts"
 
     - **Purpose**: Quickly visualize project structure in terminal and export readable Markdown documentation.
@@ -16,7 +18,7 @@
 
 ---
 
-## Get this info from the CLI
+## :fontawesome-solid-user-check: Get this info from the CLI
 
 !!! success "Usage"
 
@@ -24,7 +26,7 @@
     show-file-tree --about
     ```
 
-## Example output:
+## :material-hexagon-multiple: Example output:
 
 !!! example
 
@@ -38,7 +40,7 @@
 
 ---
 
-## Useful links
+## :material-heart-multiple-outline: Useful links
 
 - [x] **Repo**: [https://github.com/Rudra-G-23/show-file-tree](https://github.com/Rudra-G-23/show-file-tree)
 - [x] **PyPI**: [https://pypi.org/project/show-file-tree/](https://pypi.org/project/show-file-tree/)

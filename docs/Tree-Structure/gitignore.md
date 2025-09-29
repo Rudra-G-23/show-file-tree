@@ -1,4 +1,8 @@
-# --gitignore / --no-gitignore
+---
+icon: material/git
+---
+
+# :simple-git: --gitignore / --no-gitignore
 
 !!! info 
 
@@ -7,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -31,7 +35,7 @@
         ```
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
     === "`.gitignore` contents:"
@@ -61,15 +65,17 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
+
 !!! tip 
+
     - Useful in **CI pipelines** where you want a complete file tree.
     - Combine with `--hidden` to show hidden files that are also ignored by Git.
     - Combine with `--format md` for full documentation including ignored files:
 
 ---
 
-## Markdown Support
+## :material-heart-multiple-outline: Markdown Support
 
 !!! example "Formatted with Markdown file"
 

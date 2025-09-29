@@ -1,3 +1,7 @@
+---
+icon: material/theme-light-dark
+---
+
 # --theme
 
 !!! info
@@ -7,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -18,7 +22,7 @@
 
 ---
 
-## Available Themes
+## material-heart-multiple-outline: Available Themes
 
 !!! info "Available Themes"
 
@@ -31,7 +35,7 @@
 
 ---
 
-## Example
+## material-hexagon-multiple: Example
 
 !!! example
 
@@ -58,7 +62,7 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
 
 !!! tip
 

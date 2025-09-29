@@ -1,3 +1,7 @@
+---
+icon: material/border-none
+---
+
 # --no-icons
 
 !!! info
@@ -11,7 +15,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -21,7 +25,7 @@
 
 ---
 
-## Example
+## material-hexagon-multiple: Example
 
 !!! example
 
@@ -44,7 +48,7 @@
 
 ---
 
-## Behind the scenes 
+## :material-heart-multiple-outline: Behind the scenes 
 
 By default, **show-file-tree** uses a rich icon mapping for file types:
 
@@ -77,7 +81,7 @@ If any file type is missing then you can create an [Github Issues](https://githu
 
 ---
 
-## Tip
+## :material-fountain-pen-tip: Tip
 !!! tip
 
     You can combine `--no-icons` with other options such as `--size`, `--count`, or `--theme` for a clean but informative tree.

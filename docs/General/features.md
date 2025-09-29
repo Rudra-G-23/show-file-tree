@@ -1,3 +1,7 @@
+---
+icon: material/star-circle-outline
+---
+
 # ✨ Key Features of `show-file-tree`
 
 1. **Styled Tree Visualization** – Display folder and file structures in a clean, readable tree format.

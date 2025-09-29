@@ -1,3 +1,7 @@
+---
+icon: material/format-float-right
+---
+
 # --format
 
 !!! info
@@ -9,7 +13,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -25,7 +29,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
 
@@ -49,7 +53,7 @@
 
 ---
 
-## Tip
+## :material-fountain-pen-tip: Tip
 
 !!! tip
     

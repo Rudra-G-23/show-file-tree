@@ -1,10 +1,14 @@
+---
+icon: material/sort
+---
+
 # --sort
 
 !!! info
 
     The `--sort` flag controls how files and directories are sorted before displaying the tree.
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -15,13 +19,12 @@
     ```bash title="Sort By Size"
     show-file-tree  --sort size
     ```
-
-## Options
+    
 !!! abstract
     - `name` — Sort alphabetically (default).
     - `size` — Sort by file or folder size (smallest → largest).
 
-## Examples
+## :material-hexagon-multiple: Examples
 
 !!! example  "Sort by {name, order}"
 
@@ -49,7 +52,7 @@
 
 ---
 
-## Tip
+## :material-fountain-pen-tip: Tip
 
 !!! tip
 

@@ -1,3 +1,7 @@
+---
+icon: material/format-size
+---
+
 # --size
 
 !!! info
@@ -7,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -18,7 +22,7 @@
 
 ---
 
-## Example
+## material-hexagon-multiple: Example
 
 !!! example
 
@@ -39,15 +43,13 @@
         └── LICENSE (1 KB)
         ```
 
-### Legend:
-
 !!! tip "Legend"
     - Folder sizes are summed from the files inside.
     - Files show their individual size next to the name.
 
 ---
 
-## Tip
+## :material-fountain-pen-tip: Tip
 
 !!! tip
     - Combine with `--count` to see both **sizes and file counts**:

@@ -1,3 +1,7 @@
+---
+icon: material/vector-arrange-above
+---
+
 # Version
 
 !!! info
@@ -6,7 +10,7 @@
 
 ---
 
-## Usage 
+## :fontawesome-solid-user-check: Usage 
 
 !!! success "Usage"
 
@@ -16,7 +20,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example "Example"
 
@@ -38,7 +42,7 @@
 
 ---
 
-## How to update
+## :material-fountain-pen-tip: How to update
 
 !!! success "Update"
 
@@ -49,7 +53,7 @@
 
 ---
 
-## Reporting issues
+## :material-heart-multiple-outline: Reporting issues
 
 !!! abstract "When opening an issue, please include:"
 
@@ -59,7 +63,7 @@
 
 ---
 
-## Release notes / changelog
+## :fontawesome-solid-user-check: Release notes / changelog
 
 !!! note
 

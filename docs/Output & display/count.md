@@ -1,3 +1,7 @@
+---
+icon: material/counter
+---
+
 # --count
 
 !!! info 
@@ -7,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -17,23 +21,25 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
-=== "Without `--count`"
-    ```bash 
-    ├── 📁 docs
-    │   └── readme.md
-    ├── 📁 src
-    │   └── main.py
-    └── LICENSE
-    ```
-=== "With `--count`"
-    ```bash
-    ├── 📁 docs (3f, 2d)
-    │   └── readme.md
-    ├── 📁 src (5f, 1d)
-    └── LICENSE
-    ```
+!!! example 
+
+    === "Without `--count`"
+        ```bash 
+        ├── 📁 docs
+        │   └── readme.md
+        ├── 📁 src
+        │   └── main.py
+        └── LICENSE
+        ```
+    === "With `--count`"
+        ```bash
+        ├── 📁 docs (3f, 2d)
+        │   └── readme.md
+        ├── 📁 src (5f, 1d)
+        └── LICENSE
+        ```
 
 !!! tips "Legend"
     - `3f` = 3 files
@@ -41,8 +47,10 @@
 
 ---
 
-## Tip
+## :material-fountain-pen-tip: Tip
+
 !!! tip
+
     - Combine `--count` with other display flags:
     ```bash 
     show-file-tree  --count --size --theme monokai
@@ -51,7 +59,7 @@
 
 ---
 
-## Why it’s useful
+## :material-heart-multiple-outline: Why it’s useful
 
 !!! abstract
 

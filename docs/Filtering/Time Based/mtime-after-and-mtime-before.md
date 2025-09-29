@@ -1,3 +1,7 @@
+---
+icon: material/timer-cog
+---
+
 # Modification Time Filters
 
 !!! info
@@ -11,7 +15,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -32,7 +36,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
 
@@ -57,7 +61,7 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
 
 !!! tip
 

@@ -1,3 +1,7 @@
+---
+icon: material/order-alphabetical-ascending
+---
+
 # --order
 
 !!! info 
@@ -9,7 +13,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -25,7 +29,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example "Order Command"
 
@@ -44,7 +48,7 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
 
 !!! tips
 

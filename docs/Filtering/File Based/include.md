@@ -1,4 +1,9 @@
+---
+icon: material/import
+---
+
 # --include / -i
+
 !!! info
 
     - The `--include` flag allows you to **show only specific files or directories** when building the tree.  
@@ -6,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -22,7 +27,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
 
@@ -48,7 +53,7 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
 
 !!! tip
 

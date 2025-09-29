@@ -1,3 +1,7 @@
+---
+icon: material/graph
+---
+
 # --max-depth / -d
 
 !!! info
@@ -7,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success Usage
 
@@ -18,7 +22,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
 
@@ -51,8 +55,10 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
+
 !!! tip
+
     - Combine with `--count` or `--size` for a summarized view of folders at each depth.
     - Combine with `--format md` to generate **Markdown documentation** for only the top levels of a project.
     - Useful for **quick project overviews**, **documentation snapshots**, or **CI-friendly output**.

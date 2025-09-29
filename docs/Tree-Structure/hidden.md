@@ -1,3 +1,7 @@
+---
+icon: material/folder-hidden
+---
+
 # --hidden
 
 !!! info 
@@ -7,7 +11,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -18,7 +22,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
 
@@ -39,7 +43,7 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
 
 !!! tip
 
@@ -49,7 +53,7 @@
 
 ---
 
-# Advanced Features
+# :material-creation: Advanced Features
 
 !!! example "Advanced Feature"
 

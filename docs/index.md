@@ -1,12 +1,15 @@
+---
+icon: material/human-greeting-variant
+---
+
 # Hello Data Points 👋
 
-!!! quote "Desorption"
-    __A small, fast CLI to display styled file/folder trees — perfect for documenting project structure, exporting to Markdown, or quickly inspecting repos.__
+!!! quote "Description" 
+    :fontawesome-solid-address-card: __A small, fast CLI to display styled file/folder trees — perfect for documenting project structure, exporting to Markdown, or quickly inspecting repos.__
 
 ---
 
 [![Show File Tree](https://img.shields.io/badge/show--file--tree-5317eb?logo=github&logoColor=black)](https://github.com/Rudra-G-23/show-file-tree) 
-[![Downloads](https://img.shields.io/pypi/dm/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
 [![PyPI](https://img.shields.io/pypi/v/show-file-tree.svg)](https://pypi.org/project/show-file-tree)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 [![Python versions](https://img.shields.io/pypi/pyversions/show-file-tree.svg)](https://pypi.org/project/show-file-tree/)
@@ -19,13 +22,13 @@
 
 ---
 
-# Install
+## :material-robot-industrial-outline: Install
 
-!!! success "Install"
-
+!!! success "Install" 
+    
     === "From PyPI"
         ```py linenums="1" hl_lines="2"
-        # From PyPI
+        # From PyPI 
         pip install show-file-tree
         ```
 
@@ -52,7 +55,7 @@
 
 ---
 
-# Basic 
+## :fontawesome-brands-nfc-directional: Basic 
 
 !!! tip "Command Line Interface of show-file-tree"
 
@@ -72,7 +75,9 @@
 
 ---
 
-# File Path
+## :material-map-marker-path: File Path 
+
+### :fontawesome-regular-square-minus: Incorrect File Path
 
 !!! danger "File path miss Match"
 
@@ -98,6 +103,7 @@
             # Why Incorrect ✖️: First Path used 
             show-file-tree "C:\Users\Rudra\Desktop\MLOPs"  --format md 
             ```
+### :fontawesome-regular-plus-square: Correct File Path
 
 !!! success "File path  Match"
 
@@ -126,7 +132,7 @@
 
 ---
 
-# Error Handing 
+## :material-hand-heart-outline: Error Handing 
 
 !!! info "When a typo error occurs"
 
@@ -147,6 +153,8 @@
 
 ---
 
+## :material-hexagon-multiple: Example
+
 !!! example "Examples"
     ``` bash title="1. Exported in Markdown format"
     show-file-tree --format md [ROOT_PATH]
@@ -157,7 +165,7 @@
     ```
 ---
 
-# Why use `show-file-tree`?
+## 😎 Why use `show-file-tree`?
 
 - [x] **Fast, memory-safe traversal** — suitable for large directories.
 - [x] **Pretty terminal output** — icons, counts, human-readable sizes.

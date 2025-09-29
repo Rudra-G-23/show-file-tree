@@ -1,11 +1,17 @@
+---
+icon: material/export
+---
+
 # --exclude / -e
+
 !!! info
+
     - The `--exclude` flag allows you to **skip specific files or directories** when building the tree.  
     - You can use glob patterns (wildcards) to match multiple paths.
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -21,7 +27,8 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
+
 !!! example "Example how this command works"
 
     ```bash title="Files in project"
@@ -39,15 +46,17 @@
     ```bash title="Output"
     ├── 📁 src
     ├── README.md
-    └── config.yaml
+    └── config.yaml # (1)!
     ```
 
-    - `debug.log` and `tests/` are excluded from the tree.
+    1. `debug.log` and `tests/` are excluded from the tree.
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
+
 !!! tip 
+
     - Multiple `--exclude` flags can be combined for fine-grained filtering.
     - Combine with `--include` to **focus on specific file types** while ignoring others:
         ```bash title="Both"

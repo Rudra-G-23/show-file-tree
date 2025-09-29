@@ -1,5 +1,11 @@
+---
+icon: material/timer-check
+---
+
 # Creation Time Filters
+
 !!! info 
+
     **show-file-tree** supports filtering by **file creation time** using the following flags:
 
     - `--ctime-after <YYYY-MM-DD>` — Include only files created **after** the specified date.  
@@ -9,7 +15,7 @@
 
 ---
 
-## Usage
+## :fontawesome-solid-user-check: Usage
 
 !!! success "Usage"
 
@@ -31,7 +37,7 @@
 
 ---
 
-## Example
+## :material-hexagon-multiple: Example
 
 !!! example
 
@@ -56,7 +62,7 @@
 
 ---
 
-## Tips
+## :material-fountain-pen-tip: Tips
 
 !!! tip
 
