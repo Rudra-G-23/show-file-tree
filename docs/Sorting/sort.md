@@ -1,50 +1,58 @@
 # --sort
 
-The `--sort` flag controls how files and directories are sorted before displaying the tree.
+!!! info
+
+    The `--sort` flag controls how files and directories are sorted before displaying the tree.
 
 ## Usage
-```
-show-file-tree  --sort name
-show-file-tree  --sort size
-```
+
+!!! success "Usage"
+
+    ```bash title="Sort By Name"
+    show-file-tree  --sort name
+    ```
+
+    ```bash title="Sort By Size"
+    show-file-tree  --sort size
+    ```
 
 ## Options
-
-* `name` — Sort alphabetically (default).
-* `size` — Sort by file or folder size (smallest → largest).
+!!! abstract
+    - `name` — Sort alphabetically (default).
+    - `size` — Sort by file or folder size (smallest → largest).
 
 ## Examples
 
-### Sort by name (default)
+!!! example  "Sort by {name, order}"
 
-```
-show-file-tree .
-```
+    === "Sort by name (default)"
 
-Output (simplified):
+        ```bash title="Command"
+        show-file-tree .
+        ```
+        ```bash title="Output (simplified)"
+        ├── 📁 docs
+        ├── 📁 src
+        └── 📄 README.md
+        ```
+    === "Sort by size"
 
-```
-├── 📁 docs
-├── 📁 src
-└── 📄 README.md
-```
+        ```bash title="Command"
+        show-file-tree . --sort size
+        ```
 
-### Sort by size
-
-```
-show-file-tree . --sort size
-```
-
-Output (simplified):
-
-```
-└── 📄 README.md (25 KB)
-├── 📁 src (100 KB)
-└── 📁 docs (200 KB)
-```
+        ```bash title="Output (simplified)"
+        └── 📄 README.md (25 KB)
+        ├── 📁 src (100 KB)
+        └── 📁 docs (200 KB)
+        ```
 
 ---
 
 ## Tip
 
-You can combine `--sort` with [`--order`](order.md) to control ascending/descending order.
+!!! tip
+
+    You can combine `--sort` with [`--order`](order.md) to control ascending/descending order.
+
+---

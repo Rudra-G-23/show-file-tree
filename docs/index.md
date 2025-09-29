@@ -21,32 +21,34 @@
 
 # Install
 
-=== "From PyPI"
-    ```py linenums="1" hl_lines="2"
-    # From PyPI
-    pip install show-file-tree
-    ```
+!!! success "Install"
 
-=== "From UV"
-    ```py linenums="1" hl_lines="2"
-    # From UV
-    uv pip install show-file-tree
-    ```
+    === "From PyPI"
+        ```py linenums="1" hl_lines="2"
+        # From PyPI
+        pip install show-file-tree
+        ```
 
-=== "From Source"
-    ```py linenums="1" title="From Source"
-    # From source (dev)
-    git clone https://github.com/Rudra-G-23/show-file-tree.git
+    === "From UV"
+        ```py linenums="1" hl_lines="2"
+        # From UV
+        uv pip install show-file-tree
+        ```
 
-    cd show-file-tree
-    python -m venv .venv
-    ```
+    === "From Source"
+        ```py linenums="1" title="From Source"
+        # From source (dev)
+        git clone https://github.com/Rudra-G-23/show-file-tree.git
 
-=== "Windows PowerShell"
-    ```ps1 linenums="1" title="Windows PowerShell"
-    .venv\Scripts\Activate.ps1
-    pip install -e ".[all]"
-    ```
+        cd show-file-tree
+        python -m venv .venv
+        ```
+
+    === "Windows PowerShell"
+        ```ps1 linenums="1" title="Windows PowerShell"
+        .venv\Scripts\Activate.ps1
+        pip install -e ".[all]"
+        ```
 
 ---
 
